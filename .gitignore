@@ -1,0 +1,44 @@
+# Secrets and local environment
+.env
+.env.*
+!.env.example
+credentials.json
+token.json
+
+# Python cache and local tooling
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Logs and local runtime output
+*.log
+logs/
+
+# OS/editor files
+.DS_Store
+.idea/
+.vscode/
+
+# Generated pipeline data and private content
+episodes.json
+summary_status.json
+daily_digests.json
+daily_digest_status.json
+digest_email_status.json
+pipeline_runs.json
+old_readme.md
+
+# Temporary media and downloads
+*.mp3
+*.m4a
+*.wav
+*.tmp

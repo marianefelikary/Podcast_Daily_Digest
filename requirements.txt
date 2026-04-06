@@ -1,0 +1,7 @@
+feedparser==6.0.12
+requests==2.32.3
+beautifulsoup4==4.12.3
+faster-whisper==1.2.1
+google-genai
+pydantic
+python-dotenv
