@@ -123,9 +123,14 @@ def transcribe_audio_with_whisper(audio_url: str) -> str | None:
         return None
 
     try:
-        segments, _info = get_whisper_model().transcribe(audio_path)
+        segments, _info = get_whisper_model().transcribe(audio_path,
+                                                         language="en",
+                                                         vad_filter=True,
+                                                         beam_size=1,
+                                                         best_of=1)
         transcript = clean_transcript_text(" ".join(segment.text for segment in segments))
-    except Exception:
+    except Exception as e:
+        print(f"Whisper transcription failed for {audio_url}: {e}")
         return None
     finally:
         if os.path.exists(audio_path):
