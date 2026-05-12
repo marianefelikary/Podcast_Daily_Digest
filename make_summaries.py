@@ -18,7 +18,7 @@ from config import EPISODES_PATH, SUMMARY_STATUS_PATH
 
 load_dotenv()
 
-GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-3.1-flash-lite-preview")
+GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-3.1-flash-lite")
 MAX_WORKERS = int(os.getenv("SUMMARY_MAX_WORKERS", "4"))
 LLM_MAX_RETRIES = int(os.getenv("LLM_MAX_RETRIES", "3"))
 LLM_BACKOFF_SECONDS = float(os.getenv("LLM_BACKOFF_SECONDS", "1.0"))
